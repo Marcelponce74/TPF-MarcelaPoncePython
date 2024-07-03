@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./static/CSS/estilos.css">
+    <link rel="icon" href="/assets/imagenes/senderismo.png">
+    <script src="js/script.js"></script>
+    <title>Turismo+Adventure en Argentina</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <p class="logo">Turismo+Adventure</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#PageInicial">Inicio</a></li>
+                <li class="dropdown"><a href="#PageExperienciaTierra">Experiencias</a>
+                    <div class="dropdown-content">
+                        <a href="#PageExperienciaTierra">por tierra</a>
+                        <a href="#PageExperienciaAire">por aire</a>
+                        <a href="#PageExperienciaTierraAgua">por agua</a>
+                        <a href="#PageExperienciaVariadas">variadas</a>
+                    </div>
+                </li>
+                <li><a href="#PageContacto">Contacto</a></li>
+                <li><a href="#PageNosotros">Nosotros</a></li>
+                <li><a href="./administracion.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+         <!-- Comienza la seccion página inicio -->
+         
+        <section class="seccionConBoton" id="PageInicial">
+            <h2 class="titulo">Iniciando la aventura</h2>
+             <!-- carrousel de imagenes con texto -->
+            <div class="carrusel">
+                <ul class="slide">
+                    <li>
+                        <img src="./assets/imagenes/imagenInicial2.jpg" alt="Imagen 1">
+                        <div class="slideTexto">
+                            <h2>EXPERIENCIAS POR TIERRA</h2>
+                            <p>Trekking y sedentarismo, montañismo y escalada, mountain bike y cicloturismo, cabalgatas, travesías, esquí y snowboard </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./assets/imagenes/imagenInicial3.jpg" alt="Imagen 2">
+                        <div class="slideTexto">
+                            <h2>EXPERIENCIAS POR AIRE</h2>
+                            <p>Vuelos de bautismo, parapente, globo, paracidismo y planeador </p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./assets/imagenes/imagenInicial1.jpg" alt="Imagen 3">
+                        <div class="slideTexto">
+                            <h2>EXPERIENCIAS POR AGUA</h2>
+                            <p>Kayak y canoa, rafting, buceo y snorkel, windsurf y kitesurf.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a class="botonVolver" href="#PageInicial">Volver</a>
+        </section>    
+        
+         <!-- Comienza la seccion experiencias con cards animadas-->
+        <section class="seccionConBoton" id="PageExperienciaTierra">
+             <!-- Subsección experiencia por tierra -->
+            <h2 class="titulo seccionConBoton">Experiencias por tierra</h2>
+            <div class="container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/ciclismo.jpg" alt="ciclismo">
+                            <h2>Ciclismo</h2>
+                        </div>
+                        <div class="back">
+                            <p>Te ofrecemos travesías únicas para hacer en bicicleta, recorridos relevados y diseñados para que disfrutes lo mejor que cada región tiene para ofrecerte.
+                                Recorriendo Bariloche – Ushuaia (Patagonia) - Cachi – Valles Calchaquíes - El Calafate – Ushuaia - San Martín de los Andes – Cruce Andino - San Rafael, Mendoza
+                                entre otros.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/tirolesa.jpg" alt="tirolesa">
+                            <h2>Tirolesa</h2>
+                        </div>
+                        <div class="back">
+                            <p>Argentina tiene la tirolesa más grande de Sudamérica en un parque de altura ubicado en 
+                                la Reserva Natural de Villavicencio, en Mendoza, donde se encuentra Zipline Extreme, la cual recibe a miles de turistas que la eligen como actividad de diversión 
+                                y aventura en familia. VISITALA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/jumping.jpg" alt="jumping">
+                            <h2>Jumping</h2>
+                        </div>
+                        <div class="back">
+                            <p> Realizá esta experiencia en el Dique Cabra Corral a unos 85 km de Salta Capital. 
+                                Saltá al vacío desde una rampa metálica montada sobre el puente. 
+                                Uno de los deportes extremos más emocionantes y cargados de adrenalina...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/escaladas.jpg" alt="escaladas">
+                            <h2>Escaladas</h2>
+                        </div>
+                        <div class="back">
+                            <p>Solo se necesita una montaña, o una palestra, si la montaña nos queda muy lejos. 
+                             Es un programa divertido con distintos grados de dificultad. Mendoza y Patagonia, los ofrecen en distintas localidades..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/trekking.jpg" alt="treking">
+                            <h2>Treking</h2>
+                        </div>
+                        <div class="back">
+                            <p>Se puede practicar en cualquier tipo de terreno: la montaña, la playa, los hielos y hasta las ciudades reciben a los amantes de conocer 
+                                el planeta de un paso por vez.
+                                Con senderos entre bosques, montañas, lagos y ríos.  Nada mejor que la Patagonia argentina. 
+                                ¿La promesa? Disfrutar a pleno de la naturaleza y asombrarse con vistas increíbles a la vez que se realiza una actividad física muy buena para la salud..</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <a class="botonVolver" href="#PageInicial">Volver</a>
+            <!-- Subsección experiencia por aire -->
+            <h2 class="titulo seccionConBoton" id="PageExperienciaAire">Experiencias por aire</h2>
+            <div class="container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/parapente.jpg" alt="parapente">
+                            <h2>Parapente</h2>
+                        </div>
+                        <div class="back">
+                            <p>Esta aventura puede llevarnos a tocar el cielo con las manos. 
+                               La oferta es amplia y se encuentra en montañas, sierras y costas que tengan buenas corrientes térmicas. 
+                               Nos acerca a una experiencia tal vez parecida a la de las aves.
+                                Los lugares más emblemáticos en nuestro país son: el mirador de Cuchi Corral, en el Valle de Punilla de las sierras de Córdoba, y 
+                                Loma Bola, en la sierra de San Javier, cerca de San Miguel de Tucumán..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/planeador.jpg" alt="parapente">
+                            <h2>Vuelos de Bautismo</h2>
+                        </div>
+                        <div class="back">
+                            <p>
+                                Sea en un vuelo de bautismo en parapente, en un globo aerostático o saltando en paracaídas, disfrutá de la naturaleza
+                                desde una perspectiva distinta: desde bien arriba...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/paracaidsmo.jpg" alt="paracaidsmo">
+                            <h2>Paracaidismo</h2>
+                        </div>
+                        <div class="back">
+                            <p> La localidad de Lobos en la provincia de Buenos Aires es la capital nacional del paracaidismo, la única zona de saltos con espacio aéreo reservado y tres aviones habilitados 
+                                por Fuerza Aérea. En los saltos tándem o de bautismo, 
+                                se salta unido al instructor, después de una charla introductoria. Tras un minuto de caída libre se abre el paracaídas y se baja durante unos 6 a 10 minutos de manera suave.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="botonVolver" href="#PageInicial">Volver</a>
+            <!-- Subsección experiencia por agua -->
+            <h2 class="titulo seccionConBoton" id="PageExperienciaTierraAgua">Experiencias por agua</h2>
+            <div class="container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/kitesurfing.jpg" alt="kitesurf">
+                            <h2>Windsurf y Kitesurf</h2>
+                        </div>
+                        <div class="back">
+                            <p>En Argentina hay lugares espectaculares para que sientas la fuerza del agua y del viento practicando windsurf y kitesurf. Dique de Ullum y Cuesta del Viento
+                                San Juan, Embalses en las Sierras Centrales
+                                Córdoba, San Luis, Playas de Chubut
+                                Chubut, Buenos Aires, Entre Ríos, Santa Fe, Salta y más...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/kayaking.jpg" alt="kayac">
+                            <h2>Kayakismo y canoas</h2>
+                        </div>
+                        <div class="back">
+                            <p>Donde haya agua y un paisaje digno de recorrerse, habrá canoas y kayaks listos para recibir a quienes tengan ganas de remar y tomar contacto con la flora y 
+                                la fauna de las orillas. Ríos como el Pilcomayo o el mismísimo Delta del Río de la Plata, 
+                                lagos patagónicos, y los clásicos embalses de Córdoba y Mendoza, ofrecen aguas que invitan a hacer paseos que pueden ir desde un par de horas hasta unos cuantos días</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/rafting.jpg" alt="rafing">
+                            <h2>Rafting</h2>
+                        </div>
+                        <div class="back">
+                            <p>Los ríos navegables de montaña reciben a los aventureros con toda su energía. El Atuel en Mendoza y el río Manso 
+                            en el Parque Nacional Nahuel Huapi son los más elegidos del país para vivir esta propuesta plena de adrenalina y diversión ideal para realizar con amigos, solo o en familia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="botonVolver" href="#PageInicial">Volver</a>
+            <!-- Subsección experiencia variadas-->
+            <h2 class="titulo" id="PageExperienciaVariadas">Experiencias Variadas</h2>
+            <div class="container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/meditar.jpg" alt="Meditar">
+                            <h2>Meditar</h2>
+                        </div>
+                        <div class="back">
+                            <p>Retiros de yoga y meditación en El Chalten, Bariloche, Tigre, Buenos Aires o en diferentes destinos de norte a sur de nuestro país-.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/acampar.avif" alt="Acampar">
+                            <h2>Acampar</h2>
+                        </div>
+                        <div class="back">
+                            <p>Despertate frente a un lago o un río, escuchá los mil sonidos del bosque, respirá el aire más puro, contemplá montañas con nieves eternas y disfrutá de lo simple mientras visitás algunas de las áreas protegidas más hermosas de Argentina.
+
+                                Animate a vivir una de las experiencias más puras de conexión con la naturaleza y sentila en todo el cuerpo.
+                                
+                                Dónde: en los parques nacionales Lanín (Neuquén), Nahuel Huapi (Neuquén y Río Negro), Lago Puelo y Los Alerces (Chubut)  y el Área Protegida Río Azul - Lago Escondido (Río Negro)...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="./assets/imagenes/pescar.jpg" alt="Pescar">
+                            <h2>Pescar</h2>
+                        </div>
+                        <div class="back">
+                            <p>Date la oportunidad de pescar toda una jornada en ríos inigualables en donde se entremezcla el paisaje y la experiencia de la pesca deportiva, en Lagos de agua cristalina admirando las montañas del sur
+                                Argentino practicando pesca con mosca, entre sierras o valles, en el mar practicando pesca embarcado o como más te guste, disfruta esta experiencia única..</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a class="botonVolver" href="#PageInicial">Volver</a>
+        </section>
+        <!-- Seccion contacto -->
+        <section class="seccionConBoton" id="PageContacto">
+            <div class="seccionTituloMedio">
+                <h2 class="titulo"> Contactanos </h2>
+            </div>
+            <div class="generalForm">
+                <div class="formImagenLateral">
+                    <img class="imagenLateral" src="./assets/imagenes/contacto.jpg" alt="contacto">
+                </div>
+                <div class="containerForm">
+                    <form action="" method="get" id="form" name="fvalida">
+                        <div class="formElementos">
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono">
+                        </div>
+                        <div class="actividades">
+                            <div class="imgActividades">
+                                <input type="checkbox" class="actividadCheckbox" id="acampar" name="actividad" value="acampar">
+                                <label for="acampar">
+                                    <img src="./assets/Actividades/icons8-acampar-50.png" alt="acampar">
+                                </label>
+                                <span>Acampar</span>
+                            </div>
+                            <div class="imgActividades">
+                                <input type="checkbox" class="actividadCheckbox" id="meditar" name="actividad" value="meditar">
+                                <label for="meditar">
+                                    <img src="./assets/Actividades/icons8-meditar-50.png" alt="meditar">
+                                </label>
+                                <span>Meditar</span>
+                            </div>
+                            <div class="imgActividades">
+                                <input type="checkbox" class="actividadCheckbox" id="escalada" name="actividad" value="escalada">
+                                <label for="escalada">
+                                    <img src="./assets/Actividades/icons8-montaña-50 (1).png" alt="escalada">
+                                </label>
+                                <span>Escalar</span>
+                            </div>
+                            <div class="imgActividades">
+                                <input type="checkbox" class="actividadCheckbox" id="buceo" name="actividad" value="buceo">
+                                <label for="buceo">
+                                    <img src="./assets/Actividades/icons8-bucear-50.png" alt="buceo">
+                                </label>
+                                <span>Bucear</span>
+                            </div>
+                            <div class="imgActividades">
+                                <input type="checkbox" class="actividadCheckbox" id="senderismo" name="actividad" value="senderismo">
+                                <label for="senderismo">
+                                    <img src="./assets/Actividades/icons8-senderismo-50 (1).png" alt="senderismo">
+                                </label>
+                                <span>Senderismo</span>
+                            </div>
+                            <div class="imgActividades">
+                                <input type="checkbox" class="actividadCheckbox" id="pescar" name="actividad" value="pescar">
+                                <label for="pescar">
+                                    <img src="./assets/Actividades/icons8-pesca-24.png" alt="pescar">
+                                </label>
+                                <span>Pescar</span>
+                            </div>
+                        </div>
+                        <div class="formTextArea">
+                            <textarea id="mensaje" name="mensaje" placeholder="Indicanos en qué podemos ayudarte y nos ponemos en contacto ..."></textarea>
+                        </div>
+                        <input type="button" id="b1" value="Enviar" onclick="validarEnviar()">
+                        <p class="warning" id="warning"></p>
+                    </form>
+                </div>
+            </div>
+            <a class="botonVolver" href="#PageInicial">Volver</a>
+        </section>
+        <!-- Nosotros -->
+        <section class="seccionConBoton" id="PageNosotros">
+            <div class="seccionGeneralInferior">
+                <div class="seccionTituloInferior">
+                    <h2 class="titulo">Nosotros</h2>
+                </div>
+                <div class="seccionBodyInferior">
+                    <div class="seccionTextoInferior">
+                        <div class="secciontexto">
+                            <h3>Viajamos y vivimos experiencias extremas junto a vos</h3>
+                            <p>Somos un grupo dedicado a hacer posible la experiencia de realizar un deporte extremo y recorrer la Argentina buscando los mejores lugares para realizarlos.
+                                                        Al mismo tiempo que viajas, conoces lugares y realizas distintas experiencias en contacto con la naturaleza. 
+                                                       Buscamos opciones exclusivas para cada persona incluyendo alojamiento, traslados, guias especializados y todo lo que necesites adaptado a tu presupuesto.
+                                                       No dudes en contactarnos para hacer realidad tu experiencia soñada !!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="seccioniframe">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.477375703442!2d-57.95238728518376!3d-34.919562781784244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e6255784fd2d%3A0x26323acd23bad4ce!2sC.%2054%20%26%20C.%2010%2C%20B1904%20La%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1665148821990!5m2!1ses!2sar"
+                        width="400" height="300" style="border:0;" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <a class="botonVolver" href="#PageInicial">Volver</a>
+        
+    </main>
+    <!-- Footer con enlaces a redes sociales -->
+    <footer>
+        <div>
+            <a class="botonEnlaces" href="#"><img src="./assets/imagenes/gmail.png" alt="Correo" width="20"></a>
+            <a class="botonEnlaces" href="#"><img src="./assets/imagenes/facebook (4).png" alt="Facebook" width="20"></a>
+            <a class="botonEnlaces" href="#"><img src="./assets/imagenes/instagram.png" alt="instagram" width="20"></a>
+            <a class="botonEnlaces" href="#"><img src="./assets/imagenes/whatsapp.png" alt="whatsApp" width="20"></a>
+        </div>
+    </footer>
+    <a href="https://www.flaticon.es/iconos-gratis/turismo" title="turismo iconos">Turismo iconos creados por edt.im -
+        Flaticon</a>
+    
+</body>
+
+</html>
