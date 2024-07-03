@@ -107,7 +107,7 @@ class Catalogo:
 catalogo = Catalogo(host='maralep1974.mysql.pythonanywhere-services.com', user='maralep1974', password='210510Popochis',
 database='maralep1974$miapp')
 # Carpeta para guardar las imagenes
-ruta_destino = '/ inicio / maralep1974 / mi sitio / estático /imágenes'
+ruta_destino = 'https://www.pythonanywhere.com/user/maralep1974/files/home/maralep1974/mysite/static/imagenes/'
 
 @app.route("/instructores", methods=["GET"])
 def listar_instructores():
