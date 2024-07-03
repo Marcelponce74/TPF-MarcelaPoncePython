@@ -140,7 +140,7 @@ def agregar_instructores():
     nuevo_codigo = catalogo.agregar_instructores(nomyap, actividad, tarifa, nombre_imagen, localidad)
     if nuevo_codigo:    
         imagen.save(os.path.join(ruta_destino, nombre_imagen))
-        return jsonify({"mensaje": "Instructor agregado correctamente.", "codigo": nuevo_codigo, "imagen_url": nombre_imagen}), 200
+        return jsonify({"mensaje": "Instructor agregado correctamente.", "codigo": nuevo_codigo, imagen_url: nombre_imagen}), 200
     else:
         return jsonify({"mensaje": "Error al agregar el instructor."}), 500
 
