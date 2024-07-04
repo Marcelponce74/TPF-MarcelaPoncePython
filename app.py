@@ -79,10 +79,10 @@ class Catalogo:
             print("Instructor no encontrado.")
 
     # Agregar un instructor (create)
-    def agregar_instructores(self, nomyap, actividad, tarifa, imagen, localidad):
+    def agregar_instructores(self, nomyap, actividad, tarifa, imagen_url, localidad):
         
         sql = "INSERT INTO instructores (nomyap, actividad, tarifa, imagen_url, localidad) VALUES (%s, %s, %s, %s, %s)"
-        valores = (nomyap, actividad, tarifa, imagen, localidad)
+        valores = (nomyap, actividad, tarifa, imagen_url, localidad)
         self.cursor.execute(sql, valores)
         self.conn.commit()
         return self.cursor.lastrowid
@@ -128,12 +128,12 @@ def agregar_instructores():
     nomyap = request.form['nomyap']
     actividad = request.form['actividad']
     tarifa = request.form['tarifa']
-    imagen = request.files['imagen']
+    imagen_url = request.files['imagen_url']
     localidad = request.form['localidad']  
     nombre_imagen = ""
     
     # Genero el nombre de la imagen
-    nombre_imagen = secure_filename(imagen.filename)
+    nombre_imagen = secure_filename(imagen_url.filename)
     nombre_base, extension = os.path.splitext(nombre_imagen) 
     nombre_imagen = f"{nombre_base}_{int(time.time())}{extension}" 
 
@@ -153,15 +153,15 @@ def modificar_instructores(codigo):
     nueva_localidad = request.form.get("localidad")
     
     # Verifica si se proporcionó una nueva imagen
-    if 'imagen' in request.files:
-        imagen = request.files['imagen']
+    if 'imagen_url' in request.files:
+        imagen_url = request.files['imagen_url']
         # Procesamiento de la imagen
-        nombre_imagen = secure_filename(imagen.filename) 
+        nombre_imagen = secure_filename(imagen_url.filename) 
         nombre_base, extension = os.path.splitext(nombre_imagen) 
         nombre_imagen = f"{nombre_base}_{int(time.time())}{extension}" 
 
         # Guardar la imagen en el servidor
-        imagen.save(os.path.join(ruta_destino, nombre_imagen))
+        imagen_url.save(os.path.join(ruta_destino, nombre_imagen))
         
         # Busco el instructor guardado
         instructores = catalogo.consultar_instructores(codigo)
