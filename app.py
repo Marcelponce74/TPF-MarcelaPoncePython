@@ -79,10 +79,10 @@ class Catalogo:
             print("Instructor no encontrado.")
 
     # Agregar un instructor (create)
-    def agregar_instructores(self, nomyap, actividad, tarifa, imagen_url, localidad):
+    def agregar_instructores(self, nomyap, actividad, tarifa, imagen, localidad):
         
         sql = "INSERT INTO instructores (nomyap, actividad, tarifa, imagen_url, localidad) VALUES (%s, %s, %s, %s, %s)"
-        valores = (nomyap, actividad, tarifa, imagen_url, localidad)
+        valores = (nomyap, actividad, tarifa, imagen, localidad)
         self.cursor.execute(sql, valores)
         self.conn.commit()
         return self.cursor.lastrowid
@@ -128,19 +128,19 @@ def agregar_instructores():
     nomyap = request.form['nomyap']
     actividad = request.form['actividad']
     tarifa = request.form['tarifa']
-    imagen_url = request.files['imagen_url']
+    imagen = request.files['imagen']
     localidad = request.form['localidad']  
     nombre_imagen = ""
     
     # Genero el nombre de la imagen
-    nombre_imagen = secure_filename(imagen_url.filename)
+    nombre_imagen = secure_filename(imagen.filename)
     nombre_base, extension = os.path.splitext(nombre_imagen) 
     nombre_imagen = f"{nombre_base}_{int(time.time())}{extension}" 
 
-    nuevo_codigo = catalogo.agregar_instructores(nomyap, actividad, tarifa, imagen_url, localidad)
+    nuevo_codigo = catalogo.agregar_instructores(nomyap, actividad, tarifa, nombre_imagen, localidad)
     if nuevo_codigo:    
         imagen.save(os.path.join(ruta_destino, nombre_imagen))
-        return jsonify({"mensaje": "Instructor agregado correctamente.", "codigo": nuevo_codigo, "imagen_url": nombre_imagen}), 200
+        return jsonify({"mensaje": "Instructor agregado correctamente.", "codigo": nuevo_codigo, "imagen": nombre_imagen}), 200
     else:
         return jsonify({"mensaje": "Error al agregar el instructor."}), 500
 
@@ -153,15 +153,15 @@ def modificar_instructores(codigo):
     nueva_localidad = request.form.get("localidad")
     
     # Verifica si se proporcionó una nueva imagen
-    if 'imagen_url' in request.files:
-        imagen_url = request.files['imagen_url']
+    if 'imagen' in request.files:
+        imagen = request.files['imagen']
         # Procesamiento de la imagen
-        nombre_imagen = secure_filename(imagen_url.filename) 
+        nombre_imagen = secure_filename(imagen.filename) 
         nombre_base, extension = os.path.splitext(nombre_imagen) 
         nombre_imagen = f"{nombre_base}_{int(time.time())}{extension}" 
 
         # Guardar la imagen en el servidor
-        imagen_url.save(os.path.join(ruta_destino, nombre_imagen))
+        imagen.save(os.path.join(ruta_destino, nombre_imagen))
         
         # Busco el instructor guardado
         instructores = catalogo.consultar_instructores(codigo)
