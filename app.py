@@ -137,7 +137,7 @@ def agregar_instructores():
     nombre_base, extension = os.path.splitext(nombre_imagen) 
     nombre_imagen = f"{nombre_base}_{int(time.time())}{extension}" 
 
-    nuevo_codigo = catalogo.agregar_instructores(nomyap, actividad, tarifa, nombre_imagen, localidad)
+    nuevo_codigo = catalogo.agregar_instructores(nomyap, actividad, tarifa, imagen_url, localidad)
     if nuevo_codigo:    
         imagen.save(os.path.join(ruta_destino, nombre_imagen))
         return jsonify({"mensaje": "Instructor agregado correctamente.", "codigo": nuevo_codigo, "imagen_url": nombre_imagen}), 200
